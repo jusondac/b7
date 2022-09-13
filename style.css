@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  --bg: linear-gradient(43deg, rgba(0,31,142,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+
+.header, .content, .footer, .formulir {
+  /* 
+    vw    : view width
+    vh    : view heigh
+  */
+  width: 100vw;
+  /* border: 1px solid red; */
+}
+
+/* 
+  Bagian Header
+*/
+.header {
+  height: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header-logo {
+  margin: 2rem;
+  display: inherit;
+  width: 200px;
+  height: inherit;
+  align-items: center;
+  transform: translateX(-10rem);
+}
+
+.header .header-menu {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu .menu-link {
+  /* color: black; */
+  color: white;
+  text-decoration: none;
+  margin: 2rem;
+}
+/* 
+  Bagian Content
+*/
+.content {
+  height: 100vh !important;
+  background: var(--bg);
+  color: white;
+}
+
+.content .content-description {
+  width: 50%;
+  float: left;
+  margin: 5rem;
+}
+
+.content-description h1 {
+  font-size: 5rem;
+}
+
+.content-description small {
+  font-size: 14px;
+  display: inline-block;
+  width: 40rem;
+}
+
+.content .content-image {
+  width: 50%;
+  height: 100vh;
+  float: right;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  overflow-y: hidden;
+
+}
+
+.content-image img {
+  background-size: cover;
+  transition: all 300ms ease;
+}
+
+.content-image img:hover {
+  transform: scale(1.2) rotate(45deg);
+}
+
+/* 
+  Content List
+*/
+
+.content-list {
+  display: flex;
+  justify-content: center;
+  background: #ffffff !important;
+  overflow-y: hidden;
+}
+
+.content-list h1 {
+  transform: translate(40vw);
+  margin-top: 3rem;
+  color: rgb(8, 4, 4);
+}
+
+.content-list .card {
+  width: 20rem;
+  height: 20rem;
+  margin: 7rem 2rem;
+  border-radius: 50px;
+  background: linear-gradient(225deg, #cbcbcb, #ffffff);
+  box-shadow:  -20px 20px 60px #bebebe,
+               20px -20px 60px #ffffff;
+}
+
+.card .img {
+  width: inherit;
+}
+
+.card .img img {
+  width: inherit;
+  background-size: cover;
+}
+
+.card .description {
+  margin: 1rem;
+}
+
+/* 
+  Bagian Formulir
+*/
+.formulir {
+  background: var(--bg);
+  color: white;
+}
+
+form {
+  width: 30rem;
+  margin: 2rem 30rem;
+}
+
+form .field {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field label {
+  display: inline-block;
+  width: 20%;
+  margin-top: 12px;
+}
+
+.field input, .field textarea {
+  display: inline-block;
+  width: 70%;
+  border: none;
+  height: 2rem;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid black;
+  transition: all 300ms ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color:rgb(217, 217, 217);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+.field button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(26, 36, 169);
+  color: white;
+}
+
+
+/* 
+  Bagian Lain
+*/
+.content, .content-list, .formulir, .footer {
+  height: 500px;
+}
+
+.content-list {
+  background: var(--bg);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .content-description {
+    height: 500px;
+    border: 1px solid red;
+  }
+  .content-description h1 {
+    font-size: 40px;
+  }
+  .content-description small {
+    font-size: 20px;
+    height: 85%;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .content-image {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    height: 30%;
+  }
+  .header .header-logo {
+    display: none;
+  }
+}
+
